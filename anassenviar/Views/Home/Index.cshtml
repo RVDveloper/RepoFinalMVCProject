@@ -1,0 +1,143 @@
+@model ProgramaRafaAnass.Models.APISongs.Root
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="~/css/styles.css" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="darkmode">
+    <nav class="main-menu">
+        <div>
+            <div class="user-info">
+                <img src="https://raw.githubusercontent.com/RVDveloper/AnafaelBeatsFinalVersionGoldMaster/main/Anafaelbeats/static/img/_e1135106-ec32-445d-ad40-d9fb257f977e.jpg" alt="user" />
+                <p>Anafael Beats</p>
+            </div>
+            <ul>
+                <li class="nav-item active">
+                    <a href="@Url.Action("index", "Home")">
+                        <i class="fa fa-music nav-icon"></i>
+                        <span class="nav-text">Songs</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="@Url.Action("Privacy", "Home")">
+                        <i class="fa fa-user nav-icon"></i>
+                        <span class="nav-text">Artists</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="@Url.Action("GetLyrics", "Home", new { artist = "ArtistName", songTitle = "SongTitle" })">
+                        <i class="bi bi-music-note-list nav-icon"></i>
+                        <span class="nav-text">Lyrics</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="content">
+        <div class="left-content">
+            <h1 style="text-align: center;">TOP SONGS</h1>
+            
+            @if (Model != null && Model.chart_items != null)
+            {
+                <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); max-width: 1220px; margin-bottom: 60px;">
+                    @foreach (var chartItem in Model.chart_items)
+                    {
+                        var song = chartItem.item;
+                        <li class="event-card card">
+                            <div class="event-header">
+                                <h2 style="text-align: center;">
+                                    <a href="#" class="full-title" data-full-title="@song.title">@song.title</a>
+                                </h2>
+                                <img src="@song.header_image_thumbnail_url" alt="@song.title"/>
+                            </div>
+                            <div class="event-content" style="margin-top:-50PX;">
+                                <h5><h5 id="animazione"><strong>Artist:</strong></h5> @song.artist_names</h5>
+                                <h5><h5 id="animazione"><strong>Release Date:</strong> @song.release_date_for_display</h5>
+                                <h5><h5 id="animazione"><strong>Lyrics Stats:</strong></h5> @song.lyrics_state</h5>
+                                <h5><h5 id="animazione"><strong>URL:</strong></h5> <a href="@song.url" target="_blank">@song.url</a></h5>
+
+                            </div>
+                            <div class="event-footer">
+                                <div class="btn-group">
+                                    <button class="play-button btn" data-url="" id="play-button-@song.id">Play</button>
+                                    <button class="stop-button btn" style="display: none;" id="stop-button-@song.id">Stop</button>
+                                </div>
+                                <audio class="audio-player" controls style="display:none;"></audio>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No songs found.</p>
+            }
+        </div>
+    </section>
+
+    @section Scripts {
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".full-title").click(function (e) {
+                    e.preventDefault();
+                    var nameWithArtist = $(this).data("full-title");
+                    var songUrlElementId = "#play-button-" + $(this).closest("li").find(".play-button").attr("id").split('-')[2];
+                    var stopButtonId = "#stop-button-" + $(this).closest("li").find(".stop-button").attr("id").split('-')[2];
+                    $.get("/Home/FetchSongUrl", { nameWithArtist: nameWithArtist })
+                        .done(function (data) {
+                            if (data.success) {
+                                $(songUrlElementId).data("url", data.url);
+                                $(songUrlElementId).click(function () {
+                                    var audioPlayer = $(this).closest("li").find(".audio-player")[0];
+                                    var audioUrl = $(this).data("url");
+                                    if (audioUrl) {
+                                        audioPlayer.src = audioUrl;
+                                        audioPlayer.play();
+                                        $(this).hide();
+                                        $(stopButtonId).show();
+                                    }
+                                });
+                                $(stopButtonId).click(function () {
+                                    var audioPlayer = $(this).closest("li").find(".audio-player")[0];
+                                    audioPlayer.pause();
+                                    audioPlayer.currentTime = 0;
+                                    $(this).hide();
+                                    $(songUrlElementId).show();
+                                });
+                            } else {
+                                console.error("Error fetching song URL:", data.message);
+                            }
+                        })
+                        .fail(function (error) {
+                            console.error("Error fetching song URL:", error.responseText);
+                        });
+                });
+            });
+        </script>
+        <script src='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js'></script>
+        <script src="~/js/site.js"></script>
+    }
+</body>
+</html>
+
+

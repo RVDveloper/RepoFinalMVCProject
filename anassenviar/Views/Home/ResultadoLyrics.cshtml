@@ -1,0 +1,45 @@
+@model ProgramaRafaAnass.Models.APILyrics.Root
+
+@{
+    ViewData["Title"] = "Lyrics Result";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/lyrics.css">
+    <title>Lyrics Result - AnafaelBeats</title>
+</head>
+<body>
+    <section>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="gradient"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="background-img">
+                <div class="login-box" style="width: 600px; top:55%">
+                    @if (Model != null && !string.IsNullOrEmpty(Model.lyrics))
+                    {
+                        <h2>Lyrics</h2>
+                        <pre>@Model.lyrics</pre>
+                    }
+                    else
+                    {
+                        <h2>No lyrics found for the specified song.</h2>
+                    }
+
+                </div>
+            </div>
+        </div>
+        <a class="back-button" href="GetLyrics" style="top:10%;"> &lt;-- Back</a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,54 @@
+@model ProgramaRafaAnass.Models.APILyrics.Root
+
+@{
+    ViewData["Title"] = "Get Lyrics";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/lyrics.css">
+    <title>Get Lyrics - AnafaelBeats</title>
+</head>
+<body>
+    <section>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="gradient"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="background-img">
+                <div class="login-box" style="top:40%;">
+                    <h2>Get Lyrics</h2>
+                    <form method="post">
+                        <div class="user-box">
+                            <input type="text" id="artist" name="artist" required placeholder="Artist">
+                            <label>Artist</label>
+                        </div>
+                        <div class="user-box">
+                            <input type="text" id="songTitle" name="songTitle" required placeholder="Song Title">
+                            <label>Song Title</label>
+                        </div>
+                        <button type="submit">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <a class="back-button" href="Index" style="top:10%;"> &lt;-- Back Home</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@model ProgramaRafaAnass.Models.ErrorViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Home/Privacy">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="pb-3">
+        <h1 class="text-danger">Error</h1>
+        <h2 class="text-danger">An error occurred while processing your request.</h2>
+        @if (Model.ShowRequestId)
+        {
+            <p>
+                <strong>Request ID:</strong> <code>@Model.RequestId</code>
+            </p>
+        }
+        <p>
+            <a href="/">Back to Home</a>
+        </p>
+    </main>
+    <footer>
+        <hr />
+        <p>&copy; 2023 - ProgramaRafaAnass</p>
+    </footer>
+</body>
+</html>
