@@ -62,7 +62,7 @@ namespace ProgramaRafaAnass.Controllers
 
             var requestUri = new Uri($"https://genius-song-lyrics1.p.rapidapi.com/chart/songs/?time_period={period}&per_page=20&page=1");
 
-            HttpResponseMessage response = null;
+            HttpResponseMessage response = null!;
             while (response == null || !response.IsSuccessStatusCode)
             {
                 try
@@ -97,7 +97,7 @@ namespace ProgramaRafaAnass.Controllers
 
             var youtubeSearchUri = new Uri($"https://youtube-v2.p.rapidapi.com/search/?query={encodedNameWithArtist}&lang=en&order_by=this_month&country=us");
 
-            HttpResponseMessage youtubeSearchResponse = null;
+            HttpResponseMessage youtubeSearchResponse = null!;
             while (youtubeSearchResponse == null || !youtubeSearchResponse.IsSuccessStatusCode)
             {
                 try
@@ -128,7 +128,7 @@ namespace ProgramaRafaAnass.Controllers
 
                 var youtubeDownloadUri = new Uri($"https://youtube-media-downloader.p.rapidapi.com/v2/video/details?videoId={videoId}");
                 
-                HttpResponseMessage youtubeDownloadResponse = null;
+                HttpResponseMessage youtubeDownloadResponse = null!;
                 while (youtubeDownloadResponse == null || !youtubeDownloadResponse.IsSuccessStatusCode)
                 {
                     try
@@ -162,7 +162,7 @@ namespace ProgramaRafaAnass.Controllers
             ProgramaRafaAnass.Models.APIArtists.Root chartData1 = null!;
             var requestUri = new Uri("https://genius-song-lyrics1.p.rapidapi.com/chart/artists/?per_page=30&page=1");
 
-            HttpResponseMessage response = null;
+            HttpResponseMessage response = null!;
             while (response == null || !response.IsSuccessStatusCode)
             {
                 try
@@ -205,7 +205,7 @@ namespace ProgramaRafaAnass.Controllers
                 return View();
             }
 
-            ProgramaRafaAnass.Models.APILyrics.Root lyricsResult = null;
+            ProgramaRafaAnass.Models.APILyrics.Root lyricsResult = null!;
 
             try
             {
@@ -214,7 +214,7 @@ namespace ProgramaRafaAnass.Controllers
                 response.EnsureSuccessStatusCode();
 
                 var responseBody = await response.Content.ReadAsStringAsync();
-                lyricsResult = JsonConvert.DeserializeObject<ProgramaRafaAnass.Models.APILyrics.Root>(responseBody);
+                lyricsResult = JsonConvert.DeserializeObject<ProgramaRafaAnass.Models.APILyrics.Root>(responseBody)!;
             }
             catch (HttpRequestException e)
             {

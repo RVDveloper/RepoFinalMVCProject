@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anass\\OneDrive\\Desktop\\MVCV2\\ProgramaRafaAnass.csproj": {}
+    "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\anassenviar\\ProgramaRafaAnass.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anass\\OneDrive\\Desktop\\MVCV2\\ProgramaRafaAnass.csproj": {
+    "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\anassenviar\\ProgramaRafaAnass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anass\\OneDrive\\Desktop\\MVCV2\\ProgramaRafaAnass.csproj",
+        "projectUniqueName": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\anassenviar\\ProgramaRafaAnass.csproj",
         "projectName": "ProgramaRafaAnass",
-        "projectPath": "C:\\Users\\anass\\OneDrive\\Desktop\\MVCV2\\ProgramaRafaAnass.csproj",
-        "packagesPath": "C:\\Users\\anass\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anass\\OneDrive\\Desktop\\MVCV2\\obj\\",
+        "projectPath": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\anassenviar\\ProgramaRafaAnass.csproj",
+        "packagesPath": "C:\\Users\\valer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\anassenviar\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anass\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\valer\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.1.23463.5/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -66,21 +66,21 @@ h1 {
 
 @keyframes flicker {
   0% {
-    /*3*/
+    
     opacity: 25%;
     color: transparent;
     text-shadow:
     0 0 0.3vw #e00a95,
     0 0 0.521vw #e00a95;
   } 3.3% {
-    /*3*/
+    
     opacity: 25%;
     color: transparent;
     text-shadow:
     0 0 0.3vw #e00a95,
     0 0 0.521vw #e00a95;
   } 3.67% {
-    /*2*/
+    
   color: white;
   text-shadow:
     0 0 0.3vw #fff,
@@ -92,7 +92,7 @@ h1 {
     0 0 5.313vw rgba(0, 168, 253),
     0 0 7.865vw #e00a95;
   } 10% {
-    /*1*/
+    
     opacity: 75%;
     color: white;
     text-shadow:
@@ -102,7 +102,7 @@ h1 {
       0 0 3vw #e00a95,
       0 0 4vw #e00a95;
   } 36.7% {
-    /*1*/
+    
     opacity: 75%;
     color: white;
     text-shadow:
@@ -112,14 +112,14 @@ h1 {
       0 0 3vw #e00a95,
       0 0 4vw #e00a95;
   } 37.3% {
-    /*3*/
+    
     opacity: 25%;
     color: transparent;
     text-shadow:
     0 0 0.3vw rgba(0, 168, 253),
     0 0 0.521vw #e00a95;
   } 38% {
-    /*1*/
+    
     opacity: 75%;
     color: white;
     text-shadow:
@@ -129,14 +129,14 @@ h1 {
       0 0 3vw #e00a95,
       0 0 4vw #e00a95;
   } 40.67% {
-    /*3*/
+    
     opacity: 25%;
     color: transparent;
     text-shadow:
     0 0 0.3vw rgba(0, 168, 253),
     0 0 0.521vw #e00a95;
   } 41.33% {
-    /*1*/
+    
     opacity: 75%;
     color: white;
     text-shadow:
@@ -146,7 +146,7 @@ h1 {
       0 0 3vw #e00a95,
       0 0 4vw #e00a95;
   } 60% {
-    /*2*/
+    
   color: white;
   text-shadow:
     0 0 0.3vw rgba(0, 168, 253),
@@ -158,7 +158,7 @@ h1 {
     0 0 5.313vw #e00a95,
     0 0 7.865vw #e00a95;
   } 80% {
-    /*1*/
+    
     opacity: 75%;
     color: white;
     text-shadow:
@@ -168,7 +168,7 @@ h1 {
       0 0 3vw #e00a95,
       0 0 4vw #e00a95;
   } 93.3% {
-    /*2*/
+    
   color: white;
   text-shadow:
     0 0 0.3vw #fff,
@@ -180,7 +180,7 @@ h1 {
     0 0 5.313vw #e00a95,
     0 0 7.865vw #e00a95;
   } 93.5% {
-    /*1*/
+    
     opacity: 75%;
     color: white;
     text-shadow:
@@ -190,14 +190,14 @@ h1 {
       0 0 3vw #e00a95,
       0 0 4vw #e00a95;
   } 98% {
-    /*3*/
+    
     opacity: 25%;
     color: transparent;
     text-shadow:
     0 0 0.3vw #e00a95,
     0 0 0.521vw rgba(0, 168, 253);
   } 100% {
-    /*1*/
+    
     opacity: 75%;
     color: white;
     text-shadow:
@@ -261,10 +261,11 @@ body {
   position: relative;
   background-color: var(--bg-body);
   overflow: hidden;
-  margin-top: 60px;
+  margin-top: -60px;
   margin-bottom: 60px;
   width: 100vw;
 }
+
 
 /* MAIN MENU */
 
