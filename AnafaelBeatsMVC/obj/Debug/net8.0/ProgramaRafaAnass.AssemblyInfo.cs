@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProgramaRafaAnass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a00213c5547db1f0b0496ea2daa42d32624c912")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c41ae5f1c22c5617838b8b940a047282385fa7f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProgramaRafaAnass")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProgramaRafaAnass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

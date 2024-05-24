@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\anassenviar\\ProgramaRafaAnass.csproj",
+      "projectUniqueName": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\AnafaelBeatsMVC\\ProgramaRafaAnass.csproj",
       "projectName": "ProgramaRafaAnass",
-      "projectPath": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\anassenviar\\ProgramaRafaAnass.csproj",
+      "projectPath": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\AnafaelBeatsMVC\\ProgramaRafaAnass.csproj",
       "packagesPath": "C:\\Users\\valer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\anassenviar\\obj\\",
+      "outputPath": "C:\\Users\\valer\\Downloads\\paraanassfinal\\enviar\\RepoFinalMVCProject\\AnafaelBeatsMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\valer\\AppData\\Roaming\\NuGet\\NuGet.Config"
