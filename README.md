@@ -6,6 +6,9 @@ Profile: [RVDveloper](https://github.com/RVDveloper)
 
 Anafael Beats MVC es una aplicación web desarrollada en C# utilizando el patrón de diseño Modelo-Vista-Controlador (MVC). Inspirada en servicios de streaming de música como Spotify, Anafael Beats MVC busca proporcionar una experiencia completa para la exploración, reproducción y búsqueda de música y letras de canciones.
 
+Preview :
+ ![imagen](https://github.com/RVDveloper/RepoFinalMVCProject/assets/147142574/9860f59b-04d3-4092-ba07-2e19c187a475)
+
  ![imagen](https://github.com/RVDveloper/RepoFinalMVCProject/assets/147142574/0bbb7090-3ed4-4257-82ab-97493d2d862d)
 
 
