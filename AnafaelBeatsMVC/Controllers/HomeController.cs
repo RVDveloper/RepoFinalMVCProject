@@ -28,7 +28,8 @@ namespace ProgramaRafaAnass.Controllers
                 "23bcf06223msh3f4a1150d932ad5p140ca9jsn13e76faeba7e",
                 "eac4b11431msh26e2911a0d3f2e0p197eacjsn1db62c7aca2a",
                 "12c6f161d2mshf0a4c0f032cedccp1eba3ajsn9e9699c4aa07",
-                "6d4487a0a3msh95737a1d82a84f3p1643dcjsn44d14c382acf"
+                "6d4487a0a3msh95737a1d82a84f3p1643dcjsn44d14c382acf",
+                "ebc89c49a6msh887cbbd6a0c6fa0p10bd7fjsn9bf91c21f390"
             };
             _currentApiKeyIndex = 0;
             SetApiKeyHeader();
